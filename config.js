@@ -1,5 +1,5 @@
 var config = {
-  student_name: "YOUR NAME", // ie. John Doe
+  student_name: "Otavio Dutra", // ie. John Doe
   student_year_sem: "YOUR YEAR AND SEMESTER", // ie. Fall 2025
   student_email: "YOUR EMAIL", // ie. jdoe@college.harvard.edu
 
