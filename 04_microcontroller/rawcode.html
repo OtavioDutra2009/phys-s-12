@@ -8,7 +8,7 @@ int space = 1800;
 
 void setup() {
   // put your setup code here, to run once:
-  pinMode(LED, OUTPUT);  // make pin D3 output
+  pinMode(LED, OUTPUT);
 }
 
 void loop() {
@@ -81,9 +81,9 @@ void loop() {
 }
 
 void switchLED(int timing) {
-  digitalWrite(LED, HIGH);  // send some voltage to pin A3
-  delay(timing);            // short delay
+  digitalWrite(LED, HIGH);
+  delay(timing);
   digitalWrite(LED, LOW);
-  delay(shortTime);  // short delay
+  delay(shortTime);
 }
 </code></pre>
