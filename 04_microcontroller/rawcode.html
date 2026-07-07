@@ -1,5 +1,89 @@
 <link rel="stylesheet" href="../style.css">
 
-<pre><code>// Put your code here
-Serial.print("Hello World!");
+<pre><code>
+int LED = A3;
+int shortTime = 300;
+int longTime = 900;
+int space = 1800;
+
+void setup() {
+  // put your setup code here, to run once:
+  pinMode(LED, OUTPUT);  // make pin D3 output
+}
+
+void loop() {
+  // put your main code here, to run repeatedly:
+  //O
+  switchLED(longTime);
+  switchLED(longTime);
+  switchLED(longTime);
+  delay(longTime);
+
+  //T
+  switchLED(longTime);
+  delay(longTime);
+
+  //A
+  switchLED(shortTime);
+  switchLED(longTime);
+  delay(longTime);
+
+  //V
+  switchLED(shortTime);
+  switchLED(shortTime);
+  switchLED(shortTime);
+  switchLED(longTime);
+  delay(longTime);
+
+  //I
+  switchLED(shortTime);
+  switchLED(shortTime);
+  delay(longTime);
+
+  //O
+  switchLED(longTime);
+  switchLED(longTime);
+  switchLED(longTime);
+  delay(longTime);
+
+  //SPACE
+  delay(space);
+
+  //D
+  switchLED(longTime);
+  switchLED(shortTime);
+  switchLED(shortTime);
+  delay(longTime);
+
+  //U
+  switchLED(shortTime);
+  switchLED(shortTime);
+  switchLED(longTime);
+  delay(longTime);
+
+  //T
+  switchLED(longTime);
+  delay(longTime);
+
+  //R
+    switchLED(shortTime);
+    switchLED(longTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+    //A
+  switchLED(shortTime);
+  switchLED(longTime);
+  delay(longTime);
+
+  //space
+  delay(space);
+}
+
+void switchLED(int timing) {
+  digitalWrite(LED, HIGH);  // send some voltage to pin A3
+  delay(timing);            // short delay
+  digitalWrite(LED, LOW);
+  delay(shortTime);  // short delay
+}
 </code></pre>
