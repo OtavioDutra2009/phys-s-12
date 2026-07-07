@@ -5,77 +5,189 @@ int LED = A3;
 int shortTime = 300;
 int longTime = 900;
 int space = 1800;
+String Inputword = "";
 
 void setup() {
   pinMode(LED, OUTPUT);
+  Serial.begin(9600);  // Start communication at 9600 baud
+  Serial.println("Enter A Word To Decode: ");
 }
+void ToMorseCode(char code) {
+  if (code == 'A' || code == 'a') {
+    switchLED(shortTime);
+    switchLED(longTime);
+    delay(longTime);
 
-void loop() {
-  //O
-  switchLED(longTime);
-  switchLED(longTime);
-  switchLED(longTime);
-  delay(longTime);
+  } else if (code == 'B' || code == 'b') {
+    switchLED(longTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    delay(longTime);
 
-  //T
-  switchLED(longTime);
-  delay(longTime);
-
-  //A
-  switchLED(shortTime);
-  switchLED(longTime);
-  delay(longTime);
-
-  //V
-  switchLED(shortTime);
-  switchLED(shortTime);
-  switchLED(shortTime);
-  switchLED(longTime);
-  delay(longTime);
-
-  //I
-  switchLED(shortTime);
-  switchLED(shortTime);
-  delay(longTime);
-
-  //O
-  switchLED(longTime);
-  switchLED(longTime);
-  switchLED(longTime);
-  delay(longTime);
-
-  //SPACE
-  delay(space);
-
-  //D
-  switchLED(longTime);
-  switchLED(shortTime);
-  switchLED(shortTime);
-  delay(longTime);
-
-  //U
-  switchLED(shortTime);
-  switchLED(shortTime);
-  switchLED(longTime);
-  delay(longTime);
-
-  //T
-  switchLED(longTime);
-  delay(longTime);
-
-  //R
+  } else if (code == 'C' || code == 'c') {
+    switchLED(longTime);
     switchLED(shortTime);
     switchLED(longTime);
     switchLED(shortTime);
     delay(longTime);
 
-    //A
-  switchLED(shortTime);
-  switchLED(longTime);
-  delay(longTime);
+  } else if (code == 'D' || code == 'd') {
+    switchLED(longTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    delay(longTime);
 
-  //space
-  delay(space);
+  } else if (code == 'E' || code == 'e') {
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'F' || code == 'f') {
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(longTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'G' || code == 'g') {
+    switchLED(longTime);
+    switchLED(longTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'H' || code == 'h') {
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'I' || code == 'i') {
+    switchLED(shortTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'J' || code == 'j') {
+    switchLED(shortTime);
+    switchLED(longTime);
+    switchLED(longTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'K' || code == 'k') {
+    switchLED(longTime);
+    switchLED(shortTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'L' || code == 'l') {
+    switchLED(shortTime);
+    switchLED(longTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'M' || code == 'm') {
+    switchLED(longTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'N' || code == 'n') {
+    switchLED(longTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'O' || code == 'o') {
+    switchLED(longTime);
+    switchLED(longTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'P' || code == 'p') {
+    switchLED(shortTime);
+    switchLED(longTime);
+    switchLED(longTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'Q' || code == 'q') {
+    switchLED(longTime);
+    switchLED(longTime);
+    switchLED(shortTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'R' || code == 'r') {
+    switchLED(shortTime);
+    switchLED(longTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'S' || code == 's') {
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == 'T' || code == 't') {
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'U' || code == 'u') {
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'V' || code == 'v') {
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'W' || code == 'w') {
+    switchLED(shortTime);
+    switchLED(longTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'X' || code == 'x') {
+    switchLED(longTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'Y' || code == 'y') {
+    switchLED(longTime);
+    switchLED(shortTime);
+    switchLED(longTime);
+    switchLED(longTime);
+    delay(longTime);
+
+  } else if (code == 'Z' || code == 'z') {
+    switchLED(longTime);
+    switchLED(longTime);
+    switchLED(shortTime);
+    switchLED(shortTime);
+    delay(longTime);
+
+  } else if (code == ' ') {
+    delay(space);
+  }
+}
+void loop() {
+  if (Serial.available() > 0 && Inputword == "") {
+    Inputword = Serial.readStringUntil('\n');
+    Inputword.trim();
+    Serial.println("Decoding " + Inputword);
+    for (unsigned int i = 0; i < Inputword.length(); i++) {
+      Serial.println("Decoding " + Inputword.charAt(i));
+      ToMorseCode(Inputword.charAt(i));
+    }
+    Inputword = "";
+  }
 }
 
 void switchLED(int timing) {
