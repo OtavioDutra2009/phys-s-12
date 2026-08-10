@@ -26,7 +26,29 @@
         Create a microcontroller program that integrates an input and output device, using the C++ class structure and avoiding the <code>delay()</code> function. Use the oscilliscope to measure the signals on one of the pins of your output device.
       </p>
 
-     
+     <p>I am not sure where the output assigment should go, so I answered in both places, here and in the week six assigment.</p>
+
+           <p>OutPut Sensor</p>
+
+     <p>I used the MK3 plate to conduct this experiment and plotted all the data collected into a Desmos graph. I started at 26 Celsius since it is room temperature and went up to 90 Celsius. After 90 Celsius, the tape came off and all the measurements became inconsistent.</p>
+
+<p>In between 26 and 90, I plotted 11 dots. The x-axis was the raw data, and the y-axis was the actual temperature of the 3D printer plate. After plotting all the numbers, I wrote y2 = mx2 + b, giving me a new calibrated model that I could use.</p>
+
+<p>It worked, and it was accurate if it had the exact same conditions as before the tape came off. But other than that, it was off by 10 Celsius. If I added 10 Celsius by hand, it worked.</p>
+
+<img src="Output Code.png">
+
+<img src="Sensor photo.png">
+
+<img src="Output Code2.png">
+
+<img src="OutputFar1.jpeg">
+
+<img src="OutputFar2.jpeg">
+
+<img src="OutputWire.jpeg">
+
+<p>Other assigment</p>
 
       <p>
         For my final project, I am doing a smart adapter that is going to be placed in between the Brazilian 13 kg LPG gas cylinder and the brass valve. It is meant to measure the amount of Liquefied Petroleum Gas inside the cylinder by having a gas pressure sensor in the smart adapter. I spend most of the time researching if this project is even possible. I found out that I can't test with propane gas because if there is the smallest leak, that could lead to a big explosion. And the parts that my smart adapter would be placed to test or prove the concept does not have in the US (mainly because the US structure gas system is really sophisticated). It was I nightmare to design the neck of the valve with the right measurements. My smart adapter would also need to be made from aluminum. This restricts my options for making this project into reality. I was researching the gas sensor, one that is smaller than 10 mm, one that can resist 30 bars of pressure and cheap. All of them were basically more than 500 dollars for a sensor, but after looking for the sensor for more than one hour. I found the "G1/4 Pressure Transducer Sensor, Stainless Steel, 5V Input, 0.5-4.5V Output, for Water Gas Oil, 0-10PSI" for 20 dollars. It has some limitations and is kind of big, I bought it on amazon and is scheduled to come by July 25. As I searched up, I also found out that I need an antenna, and a 5V battery. For the CNC I am using basically the same one as Wut, but with two more digital analogues (as an attempt). Basically the same images as the ones I did with Wut. The worse part of my research was that my product is basically going to be useless, as the pressure of the LPG cylinder will actually drop only when the gas of the cylinder is almost over. The intent behind this project was to collect valuable information for gas distribution companies such as understanding better costumers consumptions patterns, have a better service overall (making the costumers more loyal), and significantly reduce the amount of emergency deliveries. To make matters worse I found out that I need to add a temperature sensor into my smart adapter, because as temperature increases the pressure also increases making the readings of the smart adapter incorrect. Their is a way to measure the actually pressure by using the pressure being reeded and the temperature readings, but coding this program is basically impossible with my coding skills. </p>
